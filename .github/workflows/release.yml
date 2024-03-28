@@ -48,13 +48,15 @@ jobs:
 #          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
 #          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
 #          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleDebug
+#        run: ./gradlew assembleRelease
       - name: Create a release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.version }}
           files: |
-            app/build/outputs/apk/release/app-release-unsigned.apk
+            app/build/outputs/apk/debug/app-debug.apk
+#            app/build/outputs/apk/release/app-release-unsigned.apk
 #      - name: Bump version code
 #        uses: peter-evans/create-pull-request@v6
 #        with:

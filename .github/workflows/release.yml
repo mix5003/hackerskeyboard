@@ -64,4 +64,4 @@ jobs:
           branch: bump/${{ github.event.inputs.version }}
           base: main
           add-paths: |
-            *.gradle.kts
+            *.gradle

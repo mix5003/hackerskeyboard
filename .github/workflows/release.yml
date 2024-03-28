@@ -54,7 +54,7 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.version }}
           files: |
-            app/build/outputs/apk/release/app-release.apk
+            app/build/outputs/apk/release/app-release-unsigned.apk
       - name: Bump version code
         uses: peter-evans/create-pull-request@v6
         with:

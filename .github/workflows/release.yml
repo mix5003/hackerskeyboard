@@ -62,6 +62,6 @@ jobs:
           title: "bump: ${{ github.event.inputs.version }}"
           body: "Bump versionName of the app"
           branch: bump/${{ github.event.inputs.version }}
-          base: main
+          base: master
           add-paths: |
             *.gradle

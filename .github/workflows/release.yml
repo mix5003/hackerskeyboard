@@ -62,5 +62,7 @@ jobs:
           title: "bump: ${{ github.event.inputs.version }}"
           body: "Bump versionName of the app"
           branch: bump/${{ github.event.inputs.version }}
+          base: master
+          push-to-fork: mix5003/hackerskeyboard
           add-paths: |
             *.gradle

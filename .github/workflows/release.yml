@@ -55,14 +55,13 @@ jobs:
           tag_name: ${{ github.event.inputs.version }}
           files: |
             app/build/outputs/apk/release/app-release-unsigned.apk
-      - name: Bump version code
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: "bump: ${{ github.event.inputs.version }}"
-          title: "bump: ${{ github.event.inputs.version }}"
-          body: "Bump versionName of the app"
-          branch: bump/${{ github.event.inputs.version }}
-          base: master
-          push-to-fork: mix5003/hackerskeyboard
-          add-paths: |
-            *.gradle
+#      - name: Bump version code
+#        uses: peter-evans/create-pull-request@v6
+#        with:
+#          commit-message: "bump: ${{ github.event.inputs.version }}"
+#          title: "bump: ${{ github.event.inputs.version }}"
+#          body: "Bump versionName of the app"
+#          branch: bump/${{ github.event.inputs.version }}
+#          base: master
+#          add-paths: |
+#            *.gradle
